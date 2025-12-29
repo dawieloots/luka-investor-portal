@@ -138,7 +138,7 @@ const ChatDemo = () => {
           </div>
 
           {/* Chat Interface */}
-          <div className="bg-background rounded-2xl border border-border overflow-hidden card-shadow">
+          <div className="bg-card rounded-2xl border border-border overflow-hidden card-shadow">
             {/* Chat Header */}
             <div className="flex items-center justify-between px-6 py-4 border-b border-border bg-secondary/50">
               <div className="flex items-center gap-3">
@@ -157,7 +157,7 @@ const ChatDemo = () => {
             </div>
 
             {/* Chat Messages */}
-            <div className="h-[500px] overflow-y-auto p-6 space-y-4">
+            <div className="h-[400px] md:h-[500px] overflow-y-auto p-6 space-y-4 overscroll-contain touch-pan-y">
               {displayedMessages.map((message, index) => (
                 <div
                   key={index}
