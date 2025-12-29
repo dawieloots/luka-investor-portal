@@ -4,27 +4,27 @@ const SolutionSection = () => {
   const solutions = [
     {
       icon: Bot,
-      title: 'AI-Powered Underwriting',
-      description: 'Instant risk assessment using machine learning models trained on millions of data points. No waiting, no guesswork.',
-      highlight: 'Seconds, not days',
+      title: 'Not Retrofitted. Rebuilt.',
+      description: 'uka is designed as South Africa’s first AI-native insurer, with artificial intelligence embedded across every business function and customer touchpoint from inception.',
+      highlight: 'AI-Native from day one',
     },
     {
       icon: Zap,
-      title: 'Automated Onboarding',
-      description: 'Customers go from quote to covered in minutes through intelligent conversational interfaces.',
-      highlight: '5-minute policies',
+      title: 'Built In-House, Built to Evolve',
+      description: 'Our in-house insurance system updates instantly across underwriting, pricing, claims, and service — improving continuously as AI and automation advance, without operational disruption.',
+      highlight: 'Legacy-free insurance stack',
     },
     {
       icon: FileCheck,
-      title: 'Instant Claims',
-      description: 'AI reviews evidence, validates claims, and processes payments automatically. Most claims settled in under an hour.',
-      highlight: '90% automation rate',
+      title: 'Lean by Design',
+      description: 'Luka operates with ~50% fewer people, ~30% lower costs, and AI agents delivering up to 75% higher productivity than traditional insurance models.',
+      highlight: 'Structural Cost Design',
     },
     {
       icon: Shield,
-      title: 'Smart Fraud Detection',
-      description: 'Advanced pattern recognition catches fraud in real-time while ensuring honest customers get paid fast.',
-      highlight: '60% fraud reduction',
+      title: 'AI Agents, Not Call Centres',
+      description: 'Always-on AI agents operate 24/7, in customers’ own languages, and can adopt broker or influencer personalities — turning distribution, service, and learning into software.',
+      highlight: 'Software-driven Distribution',
     },
   ];
 
@@ -41,7 +41,7 @@ const SolutionSection = () => {
               Meet <span className="text-gradient font-normal">Luka</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A ground-up rebuild of insurance for the AI age. Every process automated. 
+              A ground-up rebuild of insurance for the AI age. Every process automated.
               Every interaction intelligent. Every customer delighted.
             </p>
           </div>
@@ -76,24 +76,24 @@ const SolutionSection = () => {
                 The <span className="text-primary">lean</span> advantage
               </h3>
               <p className="text-muted-foreground">
-                By automating everything, Luka operates with a fraction of the overhead of traditional insurers.
+                AI-native operations designed to outperform legacy insurers on cost, speed, and scale.
               </p>
             </div>
             <div className="md:col-span-2 grid grid-cols-3 gap-6">
               <div className="text-center p-6 rounded-xl bg-secondary">
                 <div className="text-3xl md:text-4xl font-light text-primary mb-2">5%</div>
-                <div className="text-sm text-muted-foreground">Expense ratio</div>
-                <div className="text-xs text-muted-foreground/60 mt-1">vs 25% industry avg</div>
+                <div className="text-sm text-muted-foreground">Fewer people</div>
+                <div className="text-xs text-muted-foreground/60 mt-1">Compared to traditional insurers</div>
               </div>
               <div className="text-center p-6 rounded-xl bg-secondary">
-                <div className="text-3xl md:text-4xl font-light text-primary mb-2">Zero</div>
-                <div className="text-sm text-muted-foreground">Call centres</div>
-                <div className="text-xs text-muted-foreground/60 mt-1">100% AI-driven</div>
+                <div className="text-3xl md:text-4xl font-light text-primary mb-2">30%</div>
+                <div className="text-sm text-muted-foreground">Lower cost base</div>
+                <div className="text-xs text-muted-foreground/60 mt-1">Structural operating cost reduction</div>
               </div>
               <div className="text-center p-6 rounded-xl bg-secondary">
-                <div className="text-3xl md:text-4xl font-light text-primary mb-2">∞</div>
-                <div className="text-sm text-muted-foreground">Scalability</div>
-                <div className="text-xs text-muted-foreground/60 mt-1">Near-zero marginal cost</div>
+                <div className="text-3xl md:text-4xl font-light text-primary mb-2">10%</div>
+                <div className="text-sm text-muted-foreground">Price advantage</div>
+                <div className="text-xs text-muted-foreground/60 mt-1">Ability to undercut competitors while protecting margins</div>
               </div>
             </div>
           </div>

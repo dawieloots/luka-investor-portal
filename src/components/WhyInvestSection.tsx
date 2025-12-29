@@ -1,27 +1,27 @@
-import { Target, Cpu, Coins, Shield, ArrowRight } from 'lucide-react';
+import { TrendingDown, Bot, Globe, Trophy, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const WhyInvestSection = () => {
   const reasons = [
     {
-      icon: Target,
-      title: 'Massive Market',
-      description: 'A $7 trillion global industry with fragmented incumbents and frustrated customers.',
+      icon: TrendingDown,
+      title: 'Structural Cost Advantage',
+      description: 'In an industry where cost is the real moat, Luka leverages operational efficiency to outperform competitors.',
     },
     {
-      icon: Cpu,
-      title: 'Strong Tech Leverage',
-      description: 'AI enables 90% cost reduction vs traditional models. Technology creates a sustainable moat.',
+      icon: Bot,
+      title: 'AI-Native Platform',
+      description: 'Built for the next generation, Luka delivers insurance experiences powered by AI, redefining how customers engage with financial services.',
     },
     {
-      icon: Coins,
-      title: 'Capital-Efficient Model',
-      description: 'Lean operations mean faster path to profitability. Near-zero marginal cost to scale.',
+      icon: Globe,
+      title: 'Scalable, Global Model',
+      description: 'Proven locally, Luka’s operating model is designed without geographic limits, ready for rapid international expansion.',
     },
     {
-      icon: Shield,
-      title: 'Defensible Data Flywheel',
-      description: 'Every interaction trains our AI. More customers = smarter models = better experience = more customers.',
+      icon: Trophy,
+      title: 'Experienced Team & Market Momentum',
+      description: 'Led by founders with repeated insurance successes, Luka tackles a fast-growing market with strong VC interest and a capital-efficient path to attractive returns.',
     },
   ];
 
@@ -39,8 +39,8 @@ const WhyInvestSection = () => {
               <span className="text-gradient font-normal"> Luka</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A rare opportunity to back a team that can execute on a proven thesis 
-              in one of the world's largest addressable markets.
+              A chance to back a homegrown team bringing world-class AI insurance solutions
+              from South Africa to the global stage.
             </p>
           </div>
 
@@ -70,8 +70,9 @@ const WhyInvestSection = () => {
               The bottom line
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-              Luka combines a world-class team, breakthrough AI technology, and a massive market opportunity 
-              to build the insurance company of the future. We're looking for partners who share our vision.
+              Luka combines a world-class team, breakthrough AI technology, and a massive market
+              opportunity to build the insurance company of the future. We're looking for
+              partners who share our vision.
             </p>
             <Button variant="hero" size="xl" asChild>
               <a href="#contact" className="gap-2">

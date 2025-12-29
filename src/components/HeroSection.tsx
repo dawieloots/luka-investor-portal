@@ -8,11 +8,11 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-card" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-primary/10 rounded-full blur-2xl" />
-      
+
       <div className="container relative z-10 px-6 py-20 md:py-32">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
-          <div 
+          <div
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-8 animate-fade-in"
             style={{ animationDelay: '0.1s' }}
           >
@@ -21,55 +21,55 @@ const HeroSection = () => {
           </div>
 
           {/* Headline */}
-          <h1 
+          <h1
             className="text-4xl md:text-6xl lg:text-7xl font-light leading-tight mb-6 animate-fade-in"
             style={{ animationDelay: '0.2s' }}
           >
-            Insurance, 
+            Insurance,
             <span className="text-gradient font-normal"> reimagined</span>
             <br />
             by artificial intelligence
           </h1>
 
           {/* Subtext */}
-          <p 
+          <p
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 font-light animate-fade-in"
             style={{ animationDelay: '0.3s' }}
           >
-            Luka is building the leanest, fastest, and fairest insurance company 
-            in the world — powered entirely by AI. No legacy systems. No friction. 
-            Just intelligent automation.
+            Luka is building the leanest, fastest, and fairest insurance company in South Africa.
+            AI-native from day one. No legacy systems. No friction.
+            Just intelligent automation with a structural cost advantage.
           </p>
 
           {/* CTAs */}
-          <div 
+          <div
             className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in"
             style={{ animationDelay: '0.4s' }}
           >
             <Button variant="hero" size="xl" asChild>
-              <a href="#demo">Explore the Vision</a>
+              <a href="#demo">See Luka in Action</a>
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
-              <a href="#invest">View Investment Thesis</a>
+              <a href="#invest">Why Invest in Luka</a>
             </Button>
           </div>
 
           {/* Metrics */}
-          <div 
+          <div
             className="grid grid-cols-3 gap-8 mt-20 pt-12 border-t border-border animate-fade-in"
             style={{ animationDelay: '0.5s' }}
           >
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-light text-primary mb-2">3min</div>
-              <div className="text-sm text-muted-foreground">Average claim time</div>
+              <div className="text-3xl md:text-4xl font-light text-primary mb-2">50%</div>
+              <div className="text-sm text-muted-foreground">Less people</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-light text-primary mb-2">90%</div>
-              <div className="text-sm text-muted-foreground">Cost reduction</div>
+              <div className="text-3xl md:text-4xl font-light text-primary mb-2">30%</div>
+              <div className="text-sm text-muted-foreground">Lower cost base</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-light text-primary mb-2">24/7</div>
-              <div className="text-sm text-muted-foreground">AI availability</div>
+              <div className="text-3xl md:text-4xl font-light text-primary mb-2">75%</div>
+              <div className="text-sm text-muted-foreground">Higher productivity</div>
             </div>
           </div>
         </div>

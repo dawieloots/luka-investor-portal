@@ -1,39 +1,35 @@
-import { TrendingUp, Users, DollarSign, BarChart3 } from 'lucide-react';
+import { TrendingUp, Globe, Bot } from 'lucide-react';
 
 const FinancialsSection = () => {
   const metrics = [
     {
-      icon: TrendingUp,
+      icon: Globe,
       label: 'Global Insurtech Market',
-      value: '$7.1T',
-      detail: 'Total addressable market',
+      value: '$96bn',
+      detail: 'Revenue by 2032',
     },
     {
-      icon: Users,
-      label: 'Digital-First Customers',
-      value: '68%',
-      detail: 'Prefer online insurance',
+      icon: TrendingUp,
+      label: 'CAGR',
+      value: '26%',
+      detail: 'One of the fastest-growing segments in global finance',
     },
     {
-      icon: BarChart3,
-      label: 'Market Growth',
-      value: '15%',
-      detail: 'Annual CAGR projected',
+      icon: Bot,
+      label: 'AI-Driven',
+      value: '42%',
+      detail: 'of Insurtech deals globally involve AI',
     },
   ];
 
   const projections = [
-    { year: 'Year 1', policies: '5,000', revenue: '$2.5M', margin: '-40%' },
-    { year: 'Year 2', policies: '25,000', revenue: '$15M', margin: '5%' },
-    { year: 'Year 3', policies: '100,000', revenue: '$65M', margin: '25%' },
+    { year: 'Year 1', policies: '5,555', gep: 'R36m', npat: '-R140m', roe: '-39%' },
+    { year: 'Year 3', policies: '43,487', gep: 'R580m', npat: '-R6m', roe: '-2%' },
+    { year: 'Year 5', policies: '98,039', gep: 'R1.7bn', npat: 'R172m', roe: '52%' },
+    { year: 'Year 10', policies: '260,265', gep: 'R5.7bn', npat: 'R979m', roe: '77%' },
   ];
 
-  const useOfFunds = [
-    { category: 'Technology & AI Development', percentage: 45 },
-    { category: 'Regulatory & Licensing', percentage: 20 },
-    { category: 'Go-to-Market & Partnerships', percentage: 20 },
-    { category: 'Operations & Team', percentage: 15 },
-  ];
+
 
   return (
     <section id="financials" className="py-24 md:py-32">
@@ -48,7 +44,7 @@ const FinancialsSection = () => {
               The <span className="text-gradient font-normal">opportunity</span> in numbers
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A massive market ripe for disruption, with a capital-efficient model 
+              A massive market ripe for disruption, with a capital-efficient model
               designed for rapid, sustainable growth.
             </p>
           </div>
@@ -70,17 +66,18 @@ const FinancialsSection = () => {
             ))}
           </div>
 
-          {/* 3-Year Projections */}
+          {/* Growth Trajectory */}
           <div className="p-8 rounded-2xl bg-card border border-border mb-16">
-            <h3 className="text-xl font-medium mb-8 text-center">3-Year Growth Trajectory</h3>
+            <h3 className="text-xl font-medium mb-8 text-center">Growth Trajectory</h3>
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
                   <tr className="border-b border-border">
                     <th className="text-left py-4 px-4 text-sm font-medium text-muted-foreground">Period</th>
                     <th className="text-right py-4 px-4 text-sm font-medium text-muted-foreground">Policies</th>
-                    <th className="text-right py-4 px-4 text-sm font-medium text-muted-foreground">Revenue</th>
-                    <th className="text-right py-4 px-4 text-sm font-medium text-muted-foreground">Margin</th>
+                    <th className="text-right py-4 px-4 text-sm font-medium text-muted-foreground">GEP</th>
+                    <th className="text-right py-4 px-4 text-sm font-medium text-muted-foreground">NPAT</th>
+                    <th className="text-right py-4 px-4 text-sm font-medium text-muted-foreground">ROE</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -88,9 +85,12 @@ const FinancialsSection = () => {
                     <tr key={row.year} className={index !== projections.length - 1 ? 'border-b border-border/50' : ''}>
                       <td className="py-4 px-4 font-medium">{row.year}</td>
                       <td className="py-4 px-4 text-right text-muted-foreground">{row.policies}</td>
-                      <td className="py-4 px-4 text-right text-primary font-medium">{row.revenue}</td>
-                      <td className={`py-4 px-4 text-right font-medium ${row.margin.startsWith('-') ? 'text-destructive' : 'text-green-500'}`}>
-                        {row.margin}
+                      <td className="py-4 px-4 text-right text-primary font-medium">{row.gep}</td>
+                      <td className={`py-4 px-4 text-right font-medium ${row.npat.startsWith('-') ? 'text-destructive' : 'text-green-500'}`}>
+                        {row.npat}
+                      </td>
+                      <td className={`py-4 px-4 text-right font-medium ${row.roe.startsWith('-') ? 'text-destructive' : 'text-green-500'}`}>
+                        {row.roe}
                       </td>
                     </tr>
                   ))}
@@ -102,34 +102,7 @@ const FinancialsSection = () => {
             </p>
           </div>
 
-          {/* Use of Funds */}
-          <div className="p-8 rounded-2xl bg-card border border-border">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-                <DollarSign className="w-5 h-5 text-primary" />
-              </div>
-              <div>
-                <h3 className="text-xl font-medium">Use of Funds</h3>
-                <p className="text-sm text-muted-foreground">How investment capital drives growth</p>
-              </div>
-            </div>
-            <div className="space-y-4">
-              {useOfFunds.map((item) => (
-                <div key={item.category}>
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-sm">{item.category}</span>
-                    <span className="text-sm text-primary font-medium">{item.percentage}%</span>
-                  </div>
-                  <div className="h-2 bg-secondary rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-primary rounded-full transition-all duration-500"
-                      style={{ width: `${item.percentage}%` }}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+
         </div>
       </div>
     </section>

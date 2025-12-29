@@ -1,26 +1,26 @@
-import { AlertTriangle, Clock, DollarSign, Frown } from 'lucide-react';
+import { Database, Users, Plug, Smartphone } from 'lucide-react';
 
 const ProblemSection = () => {
   const problems = [
     {
-      icon: Clock,
-      title: 'Painfully Slow',
-      description: 'Traditional claims take 30+ days. Customers wait endlessly for paperwork, approvals, and payouts.',
+      icon: Database,
+      title: 'Legacy Cost Structures',
+      description: 'Decades-old systems and manual workflows make insurers expensive to run and difficult to modernise.',
     },
     {
-      icon: DollarSign,
-      title: 'Expensive Operations',
-      description: 'Massive overhead from call centres, adjusters, and legacy IT systems drives up premiums for everyone.',
+      icon: Users,
+      title: 'Human-heavy Operations',
+      description: 'Large call centres and manual decision-making drive errors, slow service, and poor scalability.',
     },
     {
-      icon: Frown,
-      title: 'Frustrating Experience',
-      description: 'Opaque processes, endless forms, and adversarial interactions make customers feel like the enemy.',
+      icon: Plug,
+      title: 'Technology Retrofitting',
+      description: 'AI bolted onto rigid systems delivers incremental gains, not structural advantage.',
     },
     {
-      icon: AlertTriangle,
-      title: 'Fraud & Inefficiency',
-      description: 'Manual processes miss fraud patterns while honest customers subsidise bad actors in the system.',
+      icon: Smartphone,
+      title: 'The Next Consumer is Unserved',
+      description: 'Younger generations expect personalised, interactive, always-on experiences that current insurance models cannot deliver.',
     },
   ];
 
@@ -34,12 +34,13 @@ const ProblemSection = () => {
               The Problem
             </span>
             <h2 className="text-3xl md:text-5xl font-light mb-6">
-              Insurance is fundamentally
-              <span className="text-gradient font-normal"> broken</span>
+              Insurance is structurally
+              <span className="text-gradient font-normal"> outdated</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A $7 trillion global industry running on processes designed in the 1950s. 
-              The result? High costs, poor experiences, and massive inefficiency.
+              South Africa’s insurance market moves hundreds of billions of rand each year,
+              but much of it is still powered by legacy technology and manual operations,
+              creating inefficiency at scale.
             </p>
           </div>
 
@@ -66,7 +67,7 @@ const ProblemSection = () => {
               The opportunity is <span className="text-primary font-normal">massive</span>
             </h3>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              AI and automation create a once-in-a-generation opportunity to rebuild insurance 
+              AI and automation create a once-in-a-generation opportunity to rebuild insurance
               from first principles — faster, fairer, and 10x more efficient.
             </p>
           </div>

@@ -23,27 +23,35 @@ const ChatDemo = () => {
   const [displayedMessages, setDisplayedMessages] = useState<Message[]>([]);
   const [isTyping, setIsTyping] = useState(false);
   const [isComplete, setIsComplete] = useState(false);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const [hasStarted, setHasStarted] = useState(false);
+  const chatContainerRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (chatContainerRef.current) {
+      chatContainerRef.current.scrollTo({
+        top: chatContainerRef.current.scrollHeight,
+        behavior: 'smooth'
+      });
+    }
   };
 
   useEffect(() => {
     scrollToBottom();
   }, [displayedMessages, isTyping]);
 
-  const startConversation = () => {
+  const startConversation = (scenario?: ConversationKey) => {
+    const key = scenario || activeScenario;
     setDisplayedMessages([]);
     setIsComplete(false);
     setIsTyping(false);
-    
+    setHasStarted(true);
+
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
 
-    const messages = conversations[activeScenario].messages;
+    const messages = conversations[key].messages;
     let currentIndex = 0;
     let cumulativeDelay = 500;
 
@@ -55,7 +63,7 @@ const ChatDemo = () => {
       }
 
       const message = messages[currentIndex];
-      
+
       // Show typing indicator for agent messages
       if (message.role === 'agent') {
         setIsTyping(true);
@@ -78,19 +86,19 @@ const ChatDemo = () => {
   };
 
   useEffect(() => {
-    startConversation();
     return () => {
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);
       }
     };
-  }, [activeScenario]);
+  }, []);
 
   const handleScenarioChange = (scenario: ConversationKey) => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
     setActiveScenario(scenario);
+    startConversation(scenario);
   };
 
   const handleRestart = () => {
@@ -107,10 +115,10 @@ const ChatDemo = () => {
               Product Experience
             </span>
             <h2 className="text-3xl md:text-5xl font-light mb-6">
-              See <span className="text-gradient font-normal">Luca</span> in action
+              See <span className="text-gradient font-normal">Luka</span> in action
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Experience how our AI agent handles real customer scenarios — 
+              Experience how our AI agent handles real customer scenarios —
               from getting a quote to settling a claim in minutes.
             </p>
           </div>
@@ -118,7 +126,7 @@ const ChatDemo = () => {
           {/* Scenario Selector */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Button
-              variant={activeScenario === 'insureVehicle' ? 'default' : 'outline'}
+              variant={activeScenario === 'insureVehicle' && hasStarted ? 'default' : 'outline'}
               size="lg"
               onClick={() => handleScenarioChange('insureVehicle')}
               className="gap-3"
@@ -127,7 +135,7 @@ const ChatDemo = () => {
               Insure a Vehicle
             </Button>
             <Button
-              variant={activeScenario === 'lodgeClaim' ? 'default' : 'outline'}
+              variant={activeScenario === 'lodgeClaim' && hasStarted ? 'default' : 'outline'}
               size="lg"
               onClick={() => handleScenarioChange('lodgeClaim')}
               className="gap-3"
@@ -146,7 +154,7 @@ const ChatDemo = () => {
                   <Bot className="w-5 h-5 text-primary-foreground" />
                 </div>
                 <div>
-                  <div className="font-medium text-foreground">Luca</div>
+                  <div className="font-medium text-foreground">Luka</div>
                   <div className="text-xs text-muted-foreground">AI Insurance Agent</div>
                 </div>
               </div>
@@ -157,20 +165,27 @@ const ChatDemo = () => {
             </div>
 
             {/* Chat Messages */}
-            <div className="h-[400px] md:h-[500px] overflow-y-auto p-6 space-y-4 overscroll-contain touch-pan-y">
+            <div
+              ref={chatContainerRef}
+              className="h-[400px] md:h-[500px] overflow-y-auto p-6 space-y-4 overscroll-contain touch-pan-y"
+            >
+              {!hasStarted && (
+                <div className="h-full flex flex-col items-center justify-center text-muted-foreground opacity-50">
+                  <Bot className="w-12 h-12 mb-4" />
+                  <p>Select a scenario to start the demo</p>
+                </div>
+              )}
               {displayedMessages.map((message, index) => (
                 <div
                   key={index}
-                  className={`flex gap-3 animate-fade-in ${
-                    message.role === 'user' ? 'flex-row-reverse' : ''
-                  }`}
+                  className={`flex gap-3 animate-fade-in ${message.role === 'user' ? 'flex-row-reverse' : ''
+                    }`}
                 >
                   <div
-                    className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${
-                      message.role === 'user'
-                        ? 'bg-secondary'
-                        : 'bg-primary'
-                    }`}
+                    className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${message.role === 'user'
+                      ? 'bg-secondary'
+                      : 'bg-primary'
+                      }`}
                   >
                     {message.role === 'user' ? (
                       <User className="w-4 h-4 text-foreground" />
@@ -179,11 +194,10 @@ const ChatDemo = () => {
                     )}
                   </div>
                   <div
-                    className={`max-w-[75%] px-4 py-3 rounded-2xl ${
-                      message.role === 'user'
-                        ? 'bg-primary text-primary-foreground rounded-tr-sm'
-                        : 'bg-secondary text-foreground rounded-tl-sm'
-                    }`}
+                    className={`max-w-[75%] px-4 py-3 rounded-2xl ${message.role === 'user'
+                      ? 'bg-primary text-primary-foreground rounded-tr-sm'
+                      : 'bg-secondary text-foreground rounded-tl-sm'
+                      }`}
                   >
                     <p className="text-sm whitespace-pre-line leading-relaxed">{message.content}</p>
                   </div>
@@ -205,15 +219,13 @@ const ChatDemo = () => {
                   </div>
                 </div>
               )}
-
-              <div ref={messagesEndRef} />
             </div>
 
             {/* Chat Footer */}
             <div className="px-6 py-4 border-t border-border bg-secondary/30">
               <div className="flex items-center justify-between">
                 <p className="text-sm text-muted-foreground">
-                  {isComplete ? 'Demo complete' : 'Demo in progress...'}
+                  {!hasStarted ? 'Ready to start' : isComplete ? 'Demo complete' : 'Demo in progress...'}
                 </p>
                 <Button
                   variant="ghost"
