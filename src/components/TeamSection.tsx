@@ -14,7 +14,7 @@ const TeamSection = () => {
       name: 'Dawie Loots',
       role: 'Finance & Data',
       bio: 'CA(SA) with 20+ years’ experience,mainly in insurance, including CFO and CEO roles at MUA Insurance Acceptances. AWS Certified Solutions Architect focused on data science and cloud-native systems. Bridges financial discipline with technical execution.',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face',
+      image: '/dawie.jpg',
       linkedin: 'https://www.linkedin.com/in/dawieloots',
       // twitter: '#', removed
     },
@@ -61,11 +61,11 @@ const TeamSection = () => {
                 key={founder.name}
                 className="group p-6 rounded-2xl bg-secondary border border-border hover:border-primary/30 transition-all duration-300 text-center flex flex-col h-full"
               >
-                <div className="relative w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden border-2 border-border group-hover:border-primary/30 transition-colors">
+                <div className="relative w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden border-2 border-border group-hover:border-primary/50 transition-all duration-500 group-hover:shadow-[0_0_20px_rgba(var(--primary),0.2)]">
                   <img
                     src={founder.image}
                     alt={founder.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover scale-110 transition-transform duration-500 group-hover:scale-125"
                   />
                 </div>
                 <h3 className="text-lg font-medium mb-1">{founder.name}</h3>
