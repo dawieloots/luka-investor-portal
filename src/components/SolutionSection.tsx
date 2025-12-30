@@ -5,7 +5,7 @@ const SolutionSection = () => {
     {
       icon: Bot,
       title: 'Not Retrofitted. Rebuilt.',
-      description: 'uka is designed as South Africa’s first AI-native insurer, with artificial intelligence embedded across every business function and customer touchpoint from inception.',
+      description: 'Luka is designed as South Africa’s first AI-native insurer, with artificial intelligence embedded across every business function and customer touchpoint from inception.',
       highlight: 'AI-Native from day one',
     },
     {
@@ -81,7 +81,7 @@ const SolutionSection = () => {
             </div>
             <div className="md:col-span-2 grid grid-cols-3 gap-6">
               <div className="text-center p-6 rounded-xl bg-secondary">
-                <div className="text-3xl md:text-4xl font-light text-primary mb-2">5%</div>
+                <div className="text-3xl md:text-4xl font-light text-primary mb-2">50%</div>
                 <div className="text-sm text-muted-foreground">Fewer people</div>
                 <div className="text-xs text-muted-foreground/60 mt-1">Compared to traditional insurers</div>
               </div>
@@ -91,11 +91,14 @@ const SolutionSection = () => {
                 <div className="text-xs text-muted-foreground/60 mt-1">Structural operating cost reduction</div>
               </div>
               <div className="text-center p-6 rounded-xl bg-secondary">
-                <div className="text-3xl md:text-4xl font-light text-primary mb-2">10%</div>
+                <div className="text-3xl md:text-4xl font-light text-primary mb-2">10 - 15%</div>
                 <div className="text-sm text-muted-foreground">Price advantage</div>
                 <div className="text-xs text-muted-foreground/60 mt-1">Ability to undercut competitors while protecting margins</div>
               </div>
             </div>
+            <p className="text-xs text-muted-foreground mt-8 md:col-start-2 md:col-span-2">
+              Projections are based on detailed internal modelling. Actual results may vary.
+            </p>
           </div>
         </div>
       </div>

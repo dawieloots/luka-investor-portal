@@ -12,13 +12,13 @@ const HeroSection = () => {
       <div className="container relative z-10 px-6 py-20 md:py-32">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
-          <div
+          {/* <div
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-8 animate-fade-in"
             style={{ animationDelay: '0.1s' }}
           >
             <Sparkles className="w-4 h-4 text-primary" />
             <span className="text-sm text-muted-foreground">AI-First Insurance</span>
-          </div>
+          </div> */}
 
           {/* Headline */}
           <h1
@@ -28,7 +28,6 @@ const HeroSection = () => {
             Insurance,
             <span className="text-gradient font-normal"> reimagined</span>
             <br />
-            by artificial intelligence
           </h1>
 
           {/* Subtext */}

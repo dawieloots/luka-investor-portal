@@ -6,7 +6,7 @@ const TeamSection = () => {
       name: 'Karel Frank',
       role: 'Pricing, Systems & AI',
       bio: 'Actuarial background with leadership roles in multiple successful insurance startups including OUTsurance and Youi. Former Group Strategy Officer at OUTsurance. Brings rare depth in pricing, strategy, and insurance systems.',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face',
+      image: '/karel.jpeg',
       linkedin: 'https://www.linkedin.com/in/karel-frank-69164952',
       // twitter: '#', removed
     },
