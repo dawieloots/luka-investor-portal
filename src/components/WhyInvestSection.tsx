@@ -1,27 +1,27 @@
-import { TrendingDown, Bot, Globe, Trophy, ArrowRight } from 'lucide-react';
+import { TrendingUp, Layers, Percent, Globe, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const WhyInvestSection = () => {
   const reasons = [
     {
-      icon: TrendingDown,
-      title: 'Structural Cost Advantage',
-      description: 'In an industry where cost is the real moat, Luka leverages operational efficiency to outperform competitors.',
+      icon: TrendingUp,
+      title: 'Near-Term Value Uplift',
+      description: 'A step-change in valuation within 12 months driven by insurance license approval and completion of the core system build.',
     },
     {
-      icon: Bot,
-      title: 'AI-Native Platform',
-      description: 'Built for the next generation, Luka delivers insurance experiences powered by AI, redefining how customers engage with financial services.',
+      icon: Layers,
+      title: 'Structural Cost Advantage',
+      description: 'A market-first operating model delivering up to 40% higher profitability than traditional insurance competitors.',
+    },
+    {
+      icon: Percent,
+      title: 'Compelling Investor Returs',
+      description: 'Target IRRs of 26–45%, depending on entry at seed or Series A and execution against the base to good case plan.',
     },
     {
       icon: Globe,
-      title: 'Scalable, Global Model',
-      description: 'Proven locally, Luka’s operating model is designed without geographic limits, ready for rapid international expansion.',
-    },
-    {
-      icon: Trophy,
-      title: 'Experienced Team & Market Momentum',
-      description: 'Led by founders with repeated insurance successes, Luka tackles a fast-growing market with strong VC interest and a capital-efficient path to attractive returns.',
+      title: 'Scalable Global Expansion',
+      description: 'Prove the South African model first, then expand into Australia to generate foreign-currency returns on a predominantly local cost base.',
     },
   ];
 

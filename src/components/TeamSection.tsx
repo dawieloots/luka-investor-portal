@@ -22,7 +22,7 @@ const TeamSection = () => {
       name: 'Greeff Moolman',
       role: 'Brand, Marketing & Distribution',
       bio: 'MSc in Strategic Marketing, with 15 years’ executive experience across insurance and consumer brands. Deep expertise in consumer psychology, brand building, and innovative distribution channels.',
-      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face',
+      image: '/greeff.jpeg',
       linkedin: 'https://www.linkedin.com/in/greeffmoolman',
       // twitter: '#', removed
     },
@@ -30,7 +30,7 @@ const TeamSection = () => {
       name: 'Josh Hayden', //'Johan Fourie'
       role: 'Operations, Service & Automation',
       bio: '15+ years across insurance and service industries in New Zealand and Australia (Hollard, Suncorp, Youi). Specialist in operations, automation, CRM, analytics, and end-to-end system integration.',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face',
+      image: '/josh.jpeg',
       linkedin: '#' //'https://www.linkedin.com/in/johan-joe-fourie-8301609/',
       // twitter: '#', removed
     },

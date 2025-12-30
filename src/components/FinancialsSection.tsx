@@ -98,7 +98,7 @@ const FinancialsSection = () => {
               </table>
             </div>
             <p className="text-xs text-muted-foreground text-center mt-6">
-              * Projections are illustrative and based on internal modelling. Actual results may vary.
+              * Projections are based on detailed internal modelling. Actual results may vary.
             </p>
           </div>
 
