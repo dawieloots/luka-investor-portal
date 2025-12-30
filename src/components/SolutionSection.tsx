@@ -70,7 +70,7 @@ const SolutionSection = () => {
           </div>
 
           {/* Cost Advantage */}
-          <div className="grid md:grid-cols-3 gap-8 p-8 md:p-12 rounded-2xl bg-card border border-border">
+          <div className="grid md:grid-cols-3 gap-8 p-8 md:px-12 md:pt-12 md:pb-8 rounded-2xl bg-card border border-border">
             <div className="md:col-span-1">
               <h3 className="text-2xl font-light mb-4">
                 The <span className="text-primary">lean</span> advantage
@@ -96,7 +96,7 @@ const SolutionSection = () => {
                 <div className="text-xs text-muted-foreground/60 mt-1">Ability to undercut competitors while protecting margins</div>
               </div>
             </div>
-            <p className="text-xs text-muted-foreground mt-8 md:col-start-2 md:col-span-2">
+            <p className="text-xs text-muted-foreground mt-4 md:col-start-2 md:col-span-2">
               Projections are based on detailed internal modelling. Actual results may vary.
             </p>
           </div>
