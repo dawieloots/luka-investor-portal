@@ -3,11 +3,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer base {
   :root {
     /* Luka Brand - Yellow background with black/white contrast */
-    /* Primary yellow #FFEF00 = hsl(56, 100%, 50%) */
-    --background: 56 100% 50%;
+    /* Primary yellow adjusted for mobile resilience: HSL(52, 95%, 55%) */
+    --background: 52 95% 55%;
     --foreground: 0 0% 5%;
 
     --card: 0 0% 100%;
@@ -18,12 +19,12 @@
 
     /* Primary is now black for contrast on yellow */
     --primary: 0 0% 5%;
-    --primary-foreground: 56 100% 50%;
+    --primary-foreground: 52 95% 55%;
 
     --secondary: 0 0% 95%;
     --secondary-foreground: 0 0% 5%;
 
-    --muted: 56 50% 85%;
+    --muted: 52 50% 85%;
     --muted-foreground: 0 0% 25%;
 
     --accent: 0 0% 100%;
@@ -39,7 +40,7 @@
     --radius: 0.75rem;
 
     /* Custom tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(56, 100%, 50%) 0%, hsl(52, 100%, 55%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(52, 95%, 55%) 0%, hsl(52, 100%, 55%) 100%);
     --gradient-card: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(0, 0%, 98%) 100%);
     --gradient-accent: linear-gradient(135deg, hsl(0, 0%, 5%) 0%, hsl(0, 0%, 15%) 100%);
     --shadow-glow: 0 0 60px hsl(0 0% 0% / 0.1);
@@ -48,8 +49,8 @@
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 0 0% 5%;
     --sidebar-primary: 0 0% 5%;
-    --sidebar-primary-foreground: 56 100% 50%;
-    --sidebar-accent: 56 50% 85%;
+    --sidebar-primary-foreground: 52 95% 55%;
+    --sidebar-accent: 52 50% 85%;
     --sidebar-accent-foreground: 0 0% 5%;
     --sidebar-border: 0 0% 15%;
     --sidebar-ring: 0 0% 5%;
@@ -57,17 +58,17 @@
 
   .dark {
     /* Dark mode keeps the same yellow-first approach */
-    --background: 56 100% 50%;
+    --background: 52 95% 55%;
     --foreground: 0 0% 5%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 5%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 5%;
     --primary: 0 0% 5%;
-    --primary-foreground: 56 100% 50%;
+    --primary-foreground: 52 95% 55%;
     --secondary: 0 0% 95%;
     --secondary-foreground: 0 0% 5%;
-    --muted: 56 50% 85%;
+    --muted: 52 50% 85%;
     --muted-foreground: 0 0% 25%;
     --accent: 0 0% 100%;
     --accent-foreground: 0 0% 5%;
@@ -79,8 +80,8 @@
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 0 0% 5%;
     --sidebar-primary: 0 0% 5%;
-    --sidebar-primary-foreground: 56 100% 50%;
-    --sidebar-accent: 56 50% 85%;
+    --sidebar-primary-foreground: 52 95% 55%;
+    --sidebar-accent: 52 50% 85%;
     --sidebar-accent-foreground: 0 0% 5%;
     --sidebar-border: 0 0% 15%;
     --sidebar-ring: 0 0% 5%;
@@ -141,6 +142,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -152,6 +154,7 @@
     opacity: 0;
     transform: translateY(40px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -159,17 +162,25 @@
 }
 
 @keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 20px hsl(56 100% 50% / 0.3);
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px hsl(52 95% 55% / 0.3);
   }
+
   50% {
-    box-shadow: 0 0 40px hsl(56 100% 50% / 0.5);
+    box-shadow: 0 0 40px hsl(52 95% 55% / 0.5);
   }
 }
 
 @keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
 }
 
 .animate-fade-in {
